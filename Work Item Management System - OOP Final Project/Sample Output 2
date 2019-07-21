@@ -1,0 +1,225 @@
+Team TEAM_NAME_1 was created.
+Team TEAM_NAME_1 already created.
+Board BOARD_NAME_1 was created in team TEAM_NAME_1.
+Board BOARD_NAME_1 already created in team TEAM_NAME_1.
+Board BOARD_NAME_2 was created in team TEAM_NAME_1.
+Person PERSON_NAME_1 was created.
+Person PERSON_NAME_2 was created.
+Person PERSON_NAME_1 was added to team TEAM_NAME_1.
+Person PERSON_NAME_2 was added to team TEAM_NAME_1.
+Bug with ID 1, title TITLE_NAME_1 and member name PERSON_NAME_1 was created in board BOARD_NAME_1.
+Bug with ID 2, title TITLE_NAME_2 and member name PERSON_NAME_1 was created in board BOARD_NAME_1.
+Story with ID 3 and title TITLE_NAME_3 and member name PERSON_NAME_1 was created in board BOARD_NAME_2.
+Story with ID 4 and title TITLE_NAME_4 and member name PERSON_NAME_2 was created in board BOARD_NAME_2.
+Feedback with ID 5 and title TITLE_NAME_5 was created in board BOARD_NAME_2.
+Feedback with ID 6 and title TITLE_NAME_6 was created in board BOARD_NAME_2.
+Work item with ID 1 added to member PERSON_NAME_1.
+Work item with ID 2 added to member PERSON_NAME_1.
+Work item with ID 3 added to member PERSON_NAME_1.
+Work item with ID 4 added to member PERSON_NAME_2.
+Comment was created by PERSON_NAME_2 in work item 1.
+Comment was created by PERSON_NAME_1 in work item 1.
+Comment was created by PERSON_NAME_1 in work item 5.
+PERSON_NAME_2, PERSON_NAME_1
+TEAM_NAME_1
+BOARD_NAME_1, BOARD_NAME_2
+PERSON_NAME_2, PERSON_NAME_1
+Activity history for Board BOARD_NAME_1: 
+Board BOARD_NAME_1 was created in team TEAM_NAME_1.
+Bug with ID 1, title TITLE_NAME_1 and member name PERSON_NAME_1 was created in board BOARD_NAME_1.
+Bug with ID 2, title TITLE_NAME_2 and member name PERSON_NAME_1 was created in board BOARD_NAME_1.
+
+
+Activity history for Member PERSON_NAME_2: 
+Person PERSON_NAME_2 was created.
+Person PERSON_NAME_2 was added to team TEAM_NAME_1.
+Story with ID 4 and title TITLE_NAME_4 and member name PERSON_NAME_2 was created in board BOARD_NAME_2.
+Work item with ID 4 added to member PERSON_NAME_2.
+Comment was created by PERSON_NAME_2 in work item 1.
+
+
+Activity history for Member PERSON_NAME_1: 
+Person PERSON_NAME_1 was created.
+Person PERSON_NAME_1 was added to team TEAM_NAME_1.
+Bug with ID 1, title TITLE_NAME_1 and member name PERSON_NAME_1 was created in board BOARD_NAME_1.
+Bug with ID 2, title TITLE_NAME_2 and member name PERSON_NAME_1 was created in board BOARD_NAME_1.
+Story with ID 3 and title TITLE_NAME_3 and member name PERSON_NAME_1 was created in board BOARD_NAME_2.
+Work item with ID 1 added to member PERSON_NAME_1.
+Work item with ID 2 added to member PERSON_NAME_1.
+Work item with ID 3 added to member PERSON_NAME_1.
+Comment was created by PERSON_NAME_1 in work item 1.
+Comment was created by PERSON_NAME_1 in work item 5.
+
+Activity history for Member PERSON_NAME_2: 
+Person PERSON_NAME_2 was created.
+Person PERSON_NAME_2 was added to team TEAM_NAME_1.
+Story with ID 4 and title TITLE_NAME_4 and member name PERSON_NAME_2 was created in board BOARD_NAME_2.
+Work item with ID 4 added to member PERSON_NAME_2.
+Comment was created by PERSON_NAME_2 in work item 1.
+
+Activity history for Board BOARD_NAME_1: 
+Board BOARD_NAME_1 was created in team TEAM_NAME_1.
+Bug with ID 1, title TITLE_NAME_1 and member name PERSON_NAME_1 was created in board BOARD_NAME_1.
+Bug with ID 2, title TITLE_NAME_2 and member name PERSON_NAME_1 was created in board BOARD_NAME_1.
+
+Activity history for Board BOARD_NAME_2: 
+Board BOARD_NAME_2 was created in team TEAM_NAME_1.
+Story with ID 3 and title TITLE_NAME_3 and member name PERSON_NAME_1 was created in board BOARD_NAME_2.
+Story with ID 4 and title TITLE_NAME_4 and member name PERSON_NAME_2 was created in board BOARD_NAME_2.
+Feedback with ID 5 and title TITLE_NAME_5 was created in board BOARD_NAME_2.
+Feedback with ID 6 and title TITLE_NAME_6 was created in board BOARD_NAME_2.
+
+
+Bug with ID 1:
+Bug has 2 steps to reproduce.
+Steps to reproduce: 
+STEPS_1
+STEPS_2
+Priority: High
+Severity: Minor
+Status: Active
+Assignee: PERSON_NAME_1
+
+Bug with ID 2:
+Bug has 2 steps to reproduce.
+Steps to reproduce: 
+STEPS_3
+STEPS_4
+Priority: Medium
+Severity: Critical
+Status: Fixed
+Assignee: PERSON_NAME_1
+
+Story with ID 3:
+Priority: Low
+Size: Large
+Status: Notdone
+Assignee: PERSON_NAME_1
+
+Story with ID 4:
+Priority: High
+Size: Small
+Status: Inprogress
+Assignee: PERSON_NAME_2
+
+Feedback with ID 5:
+Rating: 10
+Status: Scheduled
+
+Feedback with ID 6:
+Rating: 2
+Status: New
+
+
+Work items with status FIXED:
+Bug with ID 2 and title TITLE_NAME_2.
+
+Work item Bug with title TITLE_NAME_1 - Priority: High
+Work item Story with title TITLE_NAME_4 - Priority: High
+Work item Bug with title TITLE_NAME_2 - Priority: Medium
+Work item Story with title TITLE_NAME_3 - Priority: Low
+
+WorkItem with ID 1, title TITLE_NAME_1 and description DESCRIPTION_1, has 2 comments and 4 history messages.
+Bug with ID 1:
+Bug has 2 steps to reproduce.
+Steps to reproduce: 
+STEPS_1
+STEPS_2
+Priority: High
+Severity: Minor
+Status: Active
+Assignee: PERSON_NAME_1
+Comments: 
+Author: PERSON_NAME_2, comment: COMMENTAR_MESSAGE_1
+Author: PERSON_NAME_1, comment: COMMENTAR_MESSAGE_2
+Activity history for Bug with title TITLE_NAME_1: 
+Bug with ID 1, title TITLE_NAME_1 and member name PERSON_NAME_1 was created in board BOARD_NAME_1.
+Work item with ID 1 added to member PERSON_NAME_1.
+Comment was created by PERSON_NAME_2 in work item 1.
+Comment was created by PERSON_NAME_1 in work item 1.
+
+WorkItem with ID 2, title TITLE_NAME_2 and description DESCRIPTION_2, has 0 comments and 2 history messages.
+Bug with ID 2:
+Bug has 2 steps to reproduce.
+Steps to reproduce: 
+STEPS_3
+STEPS_4
+Priority: Medium
+Severity: Critical
+Status: Fixed
+Assignee: PERSON_NAME_1
+Comments: There are no comments for this work item.
+Activity history for Bug with title TITLE_NAME_2: 
+Bug with ID 2, title TITLE_NAME_2 and member name PERSON_NAME_1 was created in board BOARD_NAME_1.
+Work item with ID 2 added to member PERSON_NAME_1.
+
+
+WorkItem with ID 4, title TITLE_NAME_4 and description DESCRIPTION_4, has 0 comments and 2 history messages.
+Story with ID 4:
+Priority: High
+Size: Small
+Status: Inprogress
+Assignee: PERSON_NAME_2
+Comments: There are no comments for this work item.
+Activity history for Story with title TITLE_NAME_4: 
+Story with ID 4 and title TITLE_NAME_4 and member name PERSON_NAME_2 was created in board BOARD_NAME_2.
+Work item with ID 4 added to member PERSON_NAME_2.
+
+WorkItem with ID 3, title TITLE_NAME_3 and description DESCRIPTION_3, has 0 comments and 2 history messages.
+Story with ID 3:
+Priority: Low
+Size: Large
+Status: Notdone
+Assignee: PERSON_NAME_1
+Comments: There are no comments for this work item.
+Activity history for Story with title TITLE_NAME_3: 
+Story with ID 3 and title TITLE_NAME_3 and member name PERSON_NAME_1 was created in board BOARD_NAME_2.
+Work item with ID 3 added to member PERSON_NAME_1.
+
+
+WorkItem with ID 5, title TITLE_NAME_5 and description DESCRIPTION_5, has 1 comments and 2 history messages.
+Feedback with ID 5:
+Rating: 10
+Status: Scheduled
+Comment: 
+Author: PERSON_NAME_1, comment: COMMENTAR_MESSAGE_3
+Activity history for Feedback with title TITLE_NAME_5: 
+Feedback with ID 5 and title TITLE_NAME_5 was created in board BOARD_NAME_2.
+Comment was created by PERSON_NAME_1 in work item 5.
+
+WorkItem with ID 6, title TITLE_NAME_6 and description DESCRIPTION_6, has 0 comments and 1 history messages.
+Feedback with ID 6:
+Rating: 2
+Status: New
+Comments: There are no comments for this work item.
+Activity history for Feedback with title TITLE_NAME_6: 
+Feedback with ID 6 and title TITLE_NAME_6 was created in board BOARD_NAME_2.
+
+
+TITLE_NAME_1, TITLE_NAME_2, TITLE_NAME_3, TITLE_NAME_4, TITLE_NAME_5, TITLE_NAME_6
+Work item Story with title TITLE_NAME_3 - Size: Large
+Work item Story with title TITLE_NAME_4 - Size: Small
+
+Work item Bug with title TITLE_NAME_2 - Severity: Critical
+Work item Bug with title TITLE_NAME_1 - Severity: Minor
+
+Work item Feedback with title TITLE_NAME_5 - Rating: 10
+Work item Feedback with title TITLE_NAME_6 - Rating: 2
+
+Work items with assignee name PERSON_NAME_2:
+Story with ID 4 and title TITLE_NAME_4.
+
+Work items with status ACTIVE and assignee PERSON_NAME_1:
+Bug with ID 1 and title TITLE_NAME_1.
+
+Status of bug with id 1 was changed to FIXED.
+Priority of bug with id 1 was changed to MEDIUM.
+Priority of story with id 3 was changed to HIGH.
+Size of story with id 4 was changed to LARGE.
+Status of story with id 3 was changed to DONE.
+Severity of bug with id 2 was changed to MAJOR.
+Rating of feedback with id 6 was changed to 100.
+Status of feedback with id 5 was changed to UNSCHEDULED.
+Work item with ID 1 removed from member PERSON_NAME_1.
+
+Work item with ID 6 added to member PERSON_NAME_1.
