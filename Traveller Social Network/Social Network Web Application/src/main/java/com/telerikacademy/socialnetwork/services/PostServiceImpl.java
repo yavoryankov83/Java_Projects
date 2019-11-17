@@ -221,7 +221,7 @@ public class PostServiceImpl implements PostService {
   }
 
   private void checkVideoValidity(Post post, Post postToUpdate) {
-    if (!Constants.EMPTY_STRING.equals(post.getVideo())) {
+    if (!Constants.EMPTY_STRING.equals(post.getVideo()) && post.getVideo() != null) {
       String inputVideo = post.getVideo();
       int index = inputVideo.lastIndexOf("=");
 
@@ -265,3 +265,4 @@ public class PostServiceImpl implements PostService {
     return posts;
   }
 }
+

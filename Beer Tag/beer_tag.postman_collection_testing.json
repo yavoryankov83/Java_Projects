@@ -1,0 +1,949 @@
+{
+	"id": "28076009-b1ae-4e71-8f07-75b954407b5a",
+	"name": "beer_tag",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"736d3977-3902-40a0-bf6a-873c54c952bf",
+		"11adddac-d008-407c-adac-e48986222180",
+		"e7813d53-e8f5-4aaa-b381-69d2d14ed7b9",
+		"c4a3237c-0761-41da-aed3-ad6764b5159d",
+		"132251a1-0c4e-4978-900d-d38d6196a1f4",
+		"d9557151-3b8d-4a35-aaea-59b2995cf310",
+		"cb02b59f-9ef7-4fe6-a6da-68d7f9215c25",
+		"c15852ac-6e4a-424b-8d6f-70311381aed7",
+		"d9060a4c-5221-411b-bb14-57f4f7f456e8",
+		"b362df62-79c5-4012-9880-7f727a4579e0",
+		"29eba95f-420f-4190-9b7f-0c34169dad3d",
+		"159b7023-e9ef-47e0-93ec-0c06a3269403",
+		"631a69ab-6790-4830-a5e0-79e7edc8c96c",
+		"b23e7fb5-7fbe-410d-b9da-79b8d20b07ce",
+		"4c1227d4-9e4c-435b-8ec6-39ea0e9b72f5",
+		"fa772562-7905-4b47-be1f-613ea3472b9d",
+		"6a479110-96e7-455c-8582-ed65d14185d3",
+		"9baa9281-0b1d-4d3e-accb-9f7e88ea3435",
+		"0dd99886-28b6-4409-a101-ae426225a86a",
+		"16cebc6d-de8c-45b5-90d6-863684dab063"
+	],
+	"folders_order": [
+		"e9bd438a-430a-4848-b2e4-a7308db76e94",
+		"02e62578-97dc-406e-abf6-a1333bb6427f",
+		"7a779e3a-dda4-4e5c-81ce-fd323fdb1420"
+	],
+	"folders": [
+		{
+			"id": "e9bd438a-430a-4848-b2e4-a7308db76e94",
+			"name": "Test Rating",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "28076009-b1ae-4e71-8f07-75b954407b5a",
+			"folder": null,
+			"order": [
+				"0c7a45f3-1eb6-4561-b4ab-e64a5d0a0246",
+				"96555fdd-e3c6-4a86-8c3d-7d683c1260ce",
+				"1b15e2a0-b572-4848-8f0e-bf356945ea14",
+				"c15decaf-055e-4e05-8370-540282471047"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "02e62578-97dc-406e-abf6-a1333bb6427f",
+			"name": "Test Status",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "28076009-b1ae-4e71-8f07-75b954407b5a",
+			"folder": null,
+			"order": [
+				"944e70b5-420a-45bc-945a-c271962a5d32",
+				"76b20e8f-916a-41c1-8804-ac920b6849e5",
+				"adf7992d-c8fb-4e27-a730-52418655027c",
+				"9b283d89-d230-4764-ab75-f66f9d2d1161"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "7a779e3a-dda4-4e5c-81ce-fd323fdb1420",
+			"name": "Test User",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "28076009-b1ae-4e71-8f07-75b954407b5a",
+			"folder": null,
+			"order": [
+				"3af6d9dd-d323-4152-affe-6aebcf46600f",
+				"55b1ff95-e50c-4a87-ac26-a9b4838f40b9",
+				"62f0911e-49a5-442a-80a1-e5112d0f62c6",
+				"ef4a2abf-2530-417e-b0aa-ffe4469f3c2b",
+				"4a916f5b-98a4-428a-b16d-a671ff8e563e",
+				"21a0f707-9d1b-4fb2-999f-be3dcbd6469f",
+				"b6408b89-98b9-43d9-b49d-ecc6e14db8e0",
+				"a885794c-49a8-431b-8845-9907d1f48372",
+				"afbc974a-a5a3-48ea-9b0c-f0f0228c17e5"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"requests": [
+		{
+			"id": "0c7a45f3-1eb6-4561-b4ab-e64a5d0a0246",
+			"name": "GetRatingOfBeerByUser",
+			"url": "localhost:8080/api/v1/users/2/beers/45/rating",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "e9bd438a-430a-4848-b2e4-a7308db76e94",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "0dd99886-28b6-4409-a101-ae426225a86a",
+			"name": "AddStatus",
+			"url": "localhost:8080/api/v1/users/1/beers/1/addStatus/1",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "11adddac-d008-407c-adac-e48986222180",
+			"name": "GetBeerById",
+			"url": "localhost:8080/api/v1/beers",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"rawModeData": "[{\"id\":1,\"name\":\"Heineken\",\"abv\":5,\"description\":\"Bright and deep golden in color and endowed with a warm malty fragrance that’s superbly countered with a balanced hop aroma. The pleasing malt flavor yields accents of fruit and yeast that are perfectly matched by a distinct\",\"photo\":\"https://www.drinksupermarket.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/h/e/heineken-beer-330ml_temp_3.jpg\",\"brewery\":{\"id\":18,\"name\":\"Heineken International\"},\"originCountry\":{\"id\":60,\"name\":\"NETHERLANDS\"},\"style\":{\"id\":8,\"name\":\"LAGER\"},\"averageRating\":5},{\"id\":2,\"name\":\"Budweiser\",\"abv\":4.5,\"description\":null,\"photo\":\"https://australianliquorsuppliers.com.au/wp-content/uploads/2019/01/budweiser-bottle.jpg\",\"brewery\":{\"id\":19,\"name\":\"Budweiser Brewery Experience\"},\"originCountry\":{\"id\":97,\"name\":\"UNITED_STATES\"},\"style\":{\"id\":8,\"name\":\"LAGER\"},\"averageRating\":8},{\"id\":3,\"name\":\"Guinness Irish Wheat\",\"abv\":5.3,\"description\":\"Guinness Irish Wheat is brewed with Guinness ale yeast and 100% Irish wheat. This is a clean crisp\",\"photo\":\"https://i2.wp.com/lovebelfast.co.uk/wp-content/uploads/2017/03/Guinness_Irish_Wheat_FOP_UK.png?resize=3000%2C3000&ssl=1\",\"brewery\":{\"id\":9,\"name\":\"St. James Gate Brewery\"},\"originCountry\":{\"id\":41,\"name\":\"IRELAND\"},\"style\":{\"id\":15,\"name\":\"WHEAT\"},\"averageRating\":0},{\"id\":4,\"name\":\"Corona Light\",\"abv\":4.1,\"description\":\"Corona Light is a pilsner-style lager with a uniquely refreshing taste—brewed for outstanding light flavor with a crisp clean finish. Its pleasant\",\"photo\":\"https://www.gokarmacafe.com/wp-content/uploads/2018/06/cq5dam.web_.1280.12801.jpeg\",\"brewery\":{\"id\":17,\"name\":\"Corona Brewery\"},\"originCountry\":{\"id\":55,\"name\":\"MEXICO\"},\"style\":{\"id\":12,\"name\":\"PILSNER\"},\"averageRating\":3},{\"id\":5,\"name\":\"Blue Moon Harvest Pumpkin Wheat\",\"abv\":5.7,\"description\":\"Nationally recognized as a seasonal favorite Harvest Pumpkin Wheat Ale returns with the autumn flavors we’ve all grown to love. Crafted with real pumpkin and harvest spices such as cinnamon\",\"photo\":\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQcRBYXbfGFbrTNd4hxNSrm1rTAuWUd5zNzO4sjXsNzzfpd2Af\",\"brewery\":{\"id\":20,\"name\":\"Blue Moon Brewing Co.\"},\"originCountry\":{\"id\":97,\"name\":\"UNITED_STATES\"},\"style\":{\"id\":15,\"name\":\"WHEAT\"},\"averageRating\":0},{\"id\":6,\"name\":\"Zagorka Special\",\"abv\":5,\"description\":\"It has a sparkling golden color medium carbonation and thick creamy foam. Nice grainy and hops aroma\",\"photo\":\"https://cdn.minibardelivery.com/products/120474/product/111795117..jpg\",\"brewery\":{\"id\":16,\"name\":\"Zagorka\"},\"originCountry\":{\"id\":13,\"name\":\"BULGARIA\"},\"style\":{\"id\":8,\"name\":\"LAGER\"},\"averageRating\":0},{\"id\":7,\"name\":\"Heineken Zero\",\"abv\":5.4,\"description\":\"Light golden in color Heineken 0.0 has a fruity\",\"photo\":\"https://d26vuck1qo29uk.cloudfront.net/uploads/products/94b6acf02763fccc1a39846b49244550.jpg\",\"brewery\":{\"id\":18,\"name\":\"Heineken International\"},\"originCountry\":{\"id\":60,\"name\":\"NETHERLANDS\"},\"style\":{\"id\":11,\"name\":\"NON_ALCOHOLIC\"},\"averageRating\":0},{\"id\":8,\"name\":\"Corona Extra\",\"abv\":4.5,\"description\":\"With a refreshing smooth taste balanced between heavier European imports and lighter domestic beer\",\"photo\":\"https://cdn.shoplightspeed.com/shops/609238/files/2935465/corona-extra-abv-45-24-oz.jpg\",\"brewery\":{\"id\":17,\"name\":\"Corona Brewery\"},\"originCountry\":{\"id\":55,\"name\":\"MEXICO\"},\"style\":{\"id\":8,\"name\":\"LAGER\"},\"averageRating\":10},{\"id\":9,\"name\":\"Coors Light\",\"abv\":4.2,\"description\":\"Very light beer\",\"photo\":\"https://digitalcontent.api.tesco.com/v1/media/ghs/snapshotimagehandler_1718804001/8799ff883eb6480f3776552ea6dd326a60a6df128440d08094daa3ad8bda9909/05010038455531/snapshotimagehandler_1718804001.jpeg?h=540&w=540\",\"brewery\":{\"id\":22,\"name\":\"Coors Brewing Company\"},\"originCountry\":{\"id\":97,\"name\":\"UNITED_STATES\"},\"style\":{\"id\":8,\"name\":\"LAGER\"},\"averageRating\":7},{\"id\":10,\"name\":\"Bud Light\",\"abv\":4.2,\"description\":\"Bud Light is brewed using a blend of premium aroma hop varieties both American-grown and imported\",\"photo\":\"https://products0.imgix.drizly.com/ci-bud-light-19699dcd3e7591e3.png?auto=format%2Ccompress&fm=jpeg&q=20\",\"brewery\":{\"id\":19,\"name\":\"Budweiser Brewery Experience\"},\"originCountry\":{\"id\":97,\"name\":\"UNITED_STATES\"},\"style\":{\"id\":8,\"name\":\"LAGER\"},\"averageRating\":7},{\"id\":11,\"name\":\"Guinness Extra Stout\",\"abv\":5.6,\"description\":\"This is it the one that started it all. Crafted to perfection for over 200 years\",\"photo\":\"https://products1.imgix.drizly.com/ci-guinness-extra-stout-2abc388ce9c3bb61.jpeg?auto=format%2Ccompress&fm=jpeg&q=20\",\"brewery\":{\"id\":9,\"name\":\"St. James Gate Brewery\"},\"originCountry\":{\"id\":41,\"name\":\"IRELAND\"},\"style\":{\"id\":14,\"name\":\"STOUT\"},\"averageRating\":0},{\"id\":12,\"name\":\"Amstel Light\",\"abv\":3.5,\"description\":\"The official “Beer of the Burger,” Amstel Light is deep gold in color and brewed with a unique mixture of barley and hops. Its full, never-diluted flavor sets it apart from other light beers. 95 calories never tasted so good!\",\"photo\":\"https://cdn2.bigcommerce.com/server5500/tpbc2s65/products/218/images/243/amstel_light12oz__25436.1350420273.1280.1280.jpg?c=2\",\"brewery\":{\"id\":18,\"name\":\"Heineken International\"},\"originCountry\":{\"id\":60,\"name\":\"NETHERLANDS\"},\"style\":{\"id\":9,\"name\":\"LIGHT\"},\"averageRating\":0},{\"id\":13,\"name\":\"Buckler\",\"abv\":0.5,\"description\":\"Buckler is widely recognized as the best of the non-alcoholic pilsner-style beers. When poured this bright golden beer gives off aromas of warm malt that fill the senses. Its pleasant carbonation produces a true beer head. The taste is well balanced with slight residual notes of sweetness and hints of fruit.\",\"photo\":\"https://products3.imgix.drizly.com/ci-buckler-non-alcoholic-beer-a01b8eb8918aeaac.jpeg?auto=format%2Ccompress&fm=jpeg&q=20\",\"brewery\":{\"id\":18,\"name\":\"Heineken International\"},\"originCountry\":{\"id\":97,\"name\":\"UNITED_STATES\"},\"style\":{\"id\":11,\"name\":\"NON_ALCOHOLIC\"},\"averageRating\":0},{\"id\":14,\"name\":\"Kamenitza Light\",\"abv\":4.4,\"description\":\"Produced in Bulgaria under the supervision of Belgian Brewmasters.\",\"photo\":\"https://www.novinite.com/media/images/2012-06/photo_verybig_140428.jpg\",\"brewery\":{\"id\":7,\"name\":\"Kamenitza\"},\"originCountry\":{\"id\":13,\"name\":\"BULGARIA\"},\"style\":{\"id\":9,\"name\":\"LIGHT\"},\"averageRating\":0},{\"id\":15,\"name\":\"Heineken Light\",\"abv\":3.5,\"description\":\"Heineken Light has an irresistibly smooth character. From its beautiful balance of malt and hops to its mild aroma that teases the nose with hidden notes of fruit this is a beer that’s bright and bubbly. Light golden in color\",\"photo\":\"https://cdn.shoplightspeed.com/shops/611413/files/7449539/heineken-brewery-heineken-light-6pk-bottles.jpg\",\"brewery\":{\"id\":18,\"name\":\"Heineken International\"},\"originCountry\":{\"id\":60,\"name\":\"NETHERLANDS\"},\"style\":{\"id\":8,\"name\":\"LAGER\"},\"averageRating\":0},{\"id\":16,\"name\":\"Blue Moon Honey Wheat\",\"abv\":5.4,\"description\":\"Honey Wheat is crafted with clover honey balanced by a hint of citrus and tastes best with none other than the original Blue Moon orange garnish. \",\"photo\":\"https://res.cloudinary.com/ratebeer/image/upload/d_Default_Beer_qqrv7k.png,f_auto/beer_65744\",\"brewery\":{\"id\":20,\"name\":\"Blue Moon Brewing Co.\"},\"originCountry\":{\"id\":97,\"name\":\"UNITED_STATES\"},\"style\":{\"id\":7,\"name\":\"HONEY\"},\"averageRating\":0},{\"id\":17,\"name\":\"Astika\",\"abv\":5,\"description\":\"\",\"photo\":\"https://i.pinimg.com/originals/ee/62/39/ee6239fb4f89fb0ddbdcfcd00b585bc6.jpg\",\"brewery\":{\"id\":7,\"name\":\"Kamenitza\"},\"originCountry\":{\"id\":13,\"name\":\"BULGARIA\"},\"style\":{\"id\":9,\"name\":\"LIGHT\"},\"averageRating\":0},{\"id\":18,\"name\":\"Guinness Foreign Extra Stout\",\"abv\":7.5,\"description\":\"Foreign Extra Stout is brewed with generous hops and roasted barley for a bittersweet balance and full-flavored natural bite. Developed over 200 years ago for global export from Ireland\",\"photo\":\"http://www.weshayo.com/wp-content/uploads/2016/08/Guinness-Foreign.jpg\",\"brewery\":{\"id\":9,\"name\":\"St. James Gate Brewery\"},\"originCountry\":{\"id\":41,\"name\":\"IRELAND\"},\"style\":{\"id\":14,\"name\":\"STOUT\"},\"averageRating\":0},{\"id\":19,\"name\":\"Zagorka Gold\",\"abv\":5,\"description\":\"\",\"photo\":\"http://www.guidedesbieres.com/photos/4665-zagorka-gold.jpg\",\"brewery\":{\"id\":16,\"name\":\"Zagorka\"},\"originCountry\":{\"id\":13,\"name\":\"BULGARIA\"},\"style\":{\"id\":8,\"name\":\"LAGER\"},\"averageRating\":0},{\"id\":20,\"name\":\"Stella Artois\",\"abv\":5.2,\"description\":\"Stella Artois is a classic Belgian pilsner golden in color with a floral\",\"photo\":\"https://cdn.influenster.com/media/product/image/stella-artois-premium-lager-beer-nrb-660ml.jpg.750x750_q85ss0_progressive.jpg\",\"brewery\":{\"id\":23,\"name\":\"Anheuser–Busch InBev\"},\"originCountry\":{\"id\":9,\"name\":\"BELGIUM\"},\"style\":{\"id\":12,\"name\":\"PILSNER\"},\"averageRating\":0},{\"id\":21,\"name\":\"Beck's Premium Light\",\"abv\":2.3,\"description\":\"\",\"photo\":\"https://cdn.shopify.com/s/files/1/0018/9238/4825/products/177373-Becks_Premier_Light_grande.jpg?v=1569345949\",\"brewery\":{\"id\":1,\"name\":\"Beck's Brewery\"},\"originCountry\":{\"id\":33,\"name\":\"GERMANY\"},\"style\":{\"id\":8,\"name\":\"LAGER\"},\"averageRating\":0},{\"id\":22,\"name\":\"Carlsberg Pilsner\",\"abv\":4.6,\"description\":\"A refreshing and uniquely characterful international premium Pilsener with a malty backbone and balanced bitterness. Aka: probably the best beer in the world.\",\"photo\":\"https://www.drinksupermarket.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/c/a/carlsberg-pilsner-330ml.jpg\",\"brewery\":{\"id\":6,\"name\":\"Carlsberg Group\"},\"originCountry\":{\"id\":60,\"name\":\"NETHERLANDS\"},\"style\":{\"id\":12,\"name\":\"PILSNER\"},\"averageRating\":0},{\"id\":23,\"name\":\"Guinness Draught Stout\",\"abv\":4.2,\"description\":\"Brewed since 1759 in Dublin Ireland\",\"photo\":\"https://cdn2.bigcommerce.com/server5500/tpbc2s65/products/256/images/283/guinessdraught11p2oz__98782.1351005565.1280.1280.jpg?c=2\",\"brewery\":{\"id\":9,\"name\":\"St. James Gate Brewery\"},\"originCountry\":{\"id\":41,\"name\":\"IRELAND\"},\"style\":{\"id\":14,\"name\":\"STOUT\"},\"averageRating\":6},{\"id\":24,\"name\":\"Smithwick’s Red Ale\",\"abv\":4.5,\"description\":\"Smithwick’s is a ruby red brew with a gentle hop bitterness and a sweet malt finish. Subtle aromas of caramel\",\"photo\":\"https://products1.imgix.drizly.com/ci-smithwicks-ale-f81d886267fccb83.png?auto=format%2Ccompress&fm=jpeg&q=20\",\"brewery\":{\"id\":9,\"name\":\"St. James Gate Brewery\"},\"originCountry\":{\"id\":41,\"name\":\"IRELAND\"},\"style\":{\"id\":13,\"name\":\"RED\"},\"averageRating\":0},{\"id\":25,\"name\":\"Burgasko pivo\",\"abv\":4.4,\"description\":\"\",\"photo\":\"https://scontent-frx5-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p640x640/30953979_173146786735424_3481010069296906240_n.jpg?_nc_ht=scontent-frx5-1.cdninstagram.com&oh=471e3b47a7f777c0131be33d6d2b1ab0&oe=5DFD3BA8&ig_cache_key=MTc3OTQyMjg2Njk2MzgyNDQ2NQ%3D%3D.2\",\"brewery\":{\"id\":7,\"name\":\"Kamenitza\"},\"originCountry\":{\"id\":13,\"name\":\"BULGARIA\"},\"style\":{\"id\":8,\"name\":\"LAGER\"},\"averageRating\":0},{\"id\":26,\"name\":\"Shumensko Special\",\"abv\":5.2,\"description\":\"\",\"photo\":\"https://findbgfood.com/onlinestore/wp-content/uploads/2017/10/shumensko.jpg\",\"brewery\":{\"id\":6,\"name\":\"Carlsberg Group\"},\"originCountry\":{\"id\":13,\"name\":\"BULGARIA\"},\"style\":{\"id\":8,\"name\":\"LAGER\"},\"averageRating\":0},{\"id\":27,\"name\":\"Beck's Dark\",\"abv\":4.8,\"description\":\"Beck’s Dark is rich and smooth with a lingering slightly sweet aftertaste. The deep ebony color is the result of specially roasting the barley malt. \",\"photo\":\"http://www.beerinfinity.com/wp-content/uploads/becks-dark-beer.jpg\",\"brewery\":{\"id\":1,\"name\":\"Beck's Brewery\"},\"originCountry\":{\"id\":33,\"name\":\"GERMANY\"},\"style\":{\"id\":4,\"name\":\"DARK\"},\"averageRating\":0},{\"id\":28,\"name\":\"Shumensko Dark\",\"abv\":5.5,\"description\":\"\",\"photo\":\"http://men.hotnews.bg/static/uploads/tinymce/gvinea/ninko/nino/bbb/tato/hank/moody/shumensko_dark_Bottle.jpg\",\"brewery\":{\"id\":6,\"name\":\"Carlsberg Group\"},\"originCountry\":{\"id\":13,\"name\":\"BULGARIA\"},\"style\":{\"id\":8,\"name\":\"LAGER\"},\"averageRating\":0},{\"id\":29,\"name\":\"Tuborg\",\"abv\":4.6,\"description\":\"\",\"photo\":\"https://bigbarrel.co.nz/content/images/thumbs/0021817.jpeg\",\"brewery\":{\"id\":6,\"name\":\"Carlsberg Group\"},\"originCountry\":{\"id\":60,\"name\":\"NETHERLANDS\"},\"style\":{\"id\":12,\"name\":\"PILSNER\"},\"averageRating\":0},{\"id\":31,\"name\":\"Staropramen Unfiltered\",\"abv\":5,\"description\":\"\",\"photo\":\"https://previews.123rf.com/images/darios/darios1506/darios150600118/41830775-premium-unfiltered-staropramen-beer-isolated-on-white.jpg\",\"brewery\":{\"id\":10,\"name\":\"Staropramen\"},\"originCountry\":{\"id\":24,\"name\":\"CZECH_REPUBLIC\"},\"style\":{\"id\":9,\"name\":\"LIGHT\"},\"averageRating\":3},{\"id\":32,\"name\":\"Staropramen Dark\",\"abv\":4.4,\"description\":\"\",\"photo\":\"https://m.ebag.bg/en/product/153218/images/0/800\",\"brewery\":{\"id\":10,\"name\":\"Staropramen\"},\"originCountry\":{\"id\":24,\"name\":\"CZECH_REPUBLIC\"},\"style\":{\"id\":4,\"name\":\"DARK\"},\"averageRating\":0},{\"id\":33,\"name\":\"Staropramen Lager\",\"abv\":5,\"description\":\"\",\"photo\":\"https://www.ocado.com/productImages/303/303275011_0_640x640.jpg?identifier=ff8e72840f6b652acd5714e4a664e122\",\"brewery\":{\"id\":10,\"name\":\"Staropramen\"},\"originCountry\":{\"id\":24,\"name\":\"CZECH_REPUBLIC\"},\"style\":{\"id\":8,\"name\":\"LAGER\"},\"averageRating\":0},{\"id\":34,\"name\":\"Regent Lemon\",\"abv\":0.5,\"description\":\"\",\"photo\":\"https://www.drinksupermarket.com/media/catalog/product/cache/1/image/600x/040ec09b1e35df139433887a97daa66f/b/o/bohemia-regent-dark-lager-imported-czech-dark-lager-500ml-bottle.jpg\",\"brewery\":{\"id\":2,\"name\":\"Bohemia Regent\"},\"originCountry\":{\"id\":24,\"name\":\"CZECH_REPUBLIC\"},\"style\":{\"id\":5,\"name\":\"FRUIT\"},\"averageRating\":0},{\"id\":35,\"name\":\"Bolten-Ur Alt\",\"abv\":4.8,\"description\":\"\",\"photo\":\"https://www.bier-universum.de/fileadmin/BierDaten/BierBilder/bolten_ur_alt.jpg\",\"brewery\":{\"id\":3,\"name\":\"Bolten Brewery\"},\"originCountry\":{\"id\":33,\"name\":\"GERMANY\"},\"style\":{\"id\":1,\"name\":\"ALE\"},\"averageRating\":0},{\"id\":36,\"name\":\"Budweiser Budvar Free\",\"abv\":0.5,\"description\":\"The taste of a proper lager from Budweis but without alcohol.\",\"photo\":\"https://cdn.webshopapp.com/shops/216554/files/179651174/budweiser-budvar-budweiser-budvar-free-alcohol-fre.jpg\",\"brewery\":{\"id\":4,\"name\":\"Budvar\"},\"originCountry\":{\"id\":24,\"name\":\"CZECH_REPUBLIC\"},\"style\":{\"id\":11,\"name\":\"NON_ALCOHOLIC\"},\"averageRating\":0},{\"id\":37,\"name\":\"Budweiser Budvar Classic\",\"abv\":4,\"description\":\"The traditional Czech pale beer made of Žatecký hop.\",\"photo\":\"http://www.spizarniapodlysagora.pl/moduly/sklep/UserFiles/big/351/-/BudweiserBudvar10Classic.jpg\",\"brewery\":{\"id\":4,\"name\":\"Budvar\"},\"originCountry\":{\"id\":24,\"name\":\"CZECH_REPUBLIC\"},\"style\":{\"id\":6,\"name\":\"GOLDEN\"},\"averageRating\":10},{\"id\":38,\"name\":\"Budweiser Budvar Dark\",\"abv\":4.7,\"description\":\"Dark lager with distinct, bitterish taste and subtle tones.\",\"photo\":\"https://www.thebelgianbeercompany.com/wp-content/uploads/2018/09/budweiser-budvar-1.png\",\"brewery\":{\"id\":4,\"name\":\"Budvar\"},\"originCountry\":{\"id\":24,\"name\":\"CZECH_REPUBLIC\"},\"style\":{\"id\":4,\"name\":\"DARK\"},\"averageRating\":0},{\"id\":39,\"name\":\"Cantillon Lou Pepe Pure Kriek\",\"abv\":5,\"description\":\"Fresh sour cherries (krieken) in two year old Lambiek. \",\"photo\":\"https://store.belgianshop.com/3540-large_default/cantillon-lou-pepe-kriek-5-34l-v.jpg\",\"brewery\":{\"id\":5,\"name\":\"Cantillon\"},\"originCountry\":{\"id\":9,\"name\":\"BELGIUM\"},\"style\":{\"id\":5,\"name\":\"FRUIT\"},\"averageRating\":0},{\"id\":40,\"name\":\"Krombacher Wheat\",\"abv\":5.3,\"description\":\"\",\"photo\":\"https://www.beersofeurope.co.uk/images/product/l/KrombacherWeizen230119.jpg?t=1561133383\",\"brewery\":{\"id\":8,\"name\":\"Krombacher Brauerei\"},\"originCountry\":{\"id\":33,\"name\":\"GERMANY\"},\"style\":{\"id\":15,\"name\":\"WHEAT\"},\"averageRating\":6},{\"id\":41,\"name\":\"Newcastle Brown Ale\",\"abv\":4.7,\"description\":\"Brewed by Heineken, this simple, nutty beer shows earthy notes and slight bitterness, with an extremely smooth finish.\",\"photo\":\"https://digitalcontent.api.tesco.com/v1/media/ghs/snapshotimagehandler_1031852064/db80a2bd35dee751d23ce347a7e462ef112aa12bc7cf3a25eff12e023d27df2b/05010118317841/snapshotimagehandler_1031852064.jpeg?h=540&w=540\",\"brewery\":{\"id\":18,\"name\":\"Heineken International\"},\"originCountry\":{\"id\":96,\"name\":\"UNITED_KINGDOM\"},\"style\":{\"id\":3,\"name\":\"BROWN\"},\"averageRating\":0},{\"id\":42,\"name\":\"Famosa Malt Lager\",\"abv\":5,\"description\":\"\",\"photo\":\"https://static.vinepair.com/wp-content/uploads/2017/04/beer-2-famosa.jpg\",\"brewery\":{\"id\":11,\"name\":\"Cervecería Centro Americana\"},\"originCountry\":{\"id\":97,\"name\":\"UNITED_STATES\"},\"style\":{\"id\":10,\"name\":\"MALT\"},\"averageRating\":0},{\"id\":43,\"name\":\"Rogue American Amber Ale\",\"abv\":5.1,\"description\":\"Tawny amber in color with a coffee aroma and tight head. \",\"photo\":\"https://www.wishbeer.com/806-large_default/rogue-american-amber-ale-355-ml-56.jpg\",\"brewery\":{\"id\":12,\"name\":\"Rogue Ales\"},\"originCountry\":{\"id\":97,\"name\":\"UNITED_STATES\"},\"style\":{\"id\":2,\"name\":\"AMBER\"},\"averageRating\":0},{\"id\":44,\"name\":\"Weihenstephan Light Wheat Beer\",\"abv\":2.6,\"description\":\"It impresses the connoisseur with its golden-yellow colour and its fine poured white foam. \",\"photo\":\"https://media.danmurphys.com.au/dmo/product/744752-1.png\",\"brewery\":{\"id\":13,\"name\":\"Weihenstephan Brewery\"},\"originCountry\":{\"id\":33,\"name\":\"GERMANY\"},\"style\":{\"id\":9,\"name\":\"LIGHT\"},\"averageRating\":6},{\"id\":45,\"name\":\"Weihenstephan Non-Alcoholic Original Helles\",\"abv\":0.5,\"description\":\"The pleasant spicy hops note and the full light and sweet flavor, with a slight bitterness, makes it an ideal companion for snacks, hearty salads or simply a refreshment on hot days. \",\"photo\":\"https://www.lcbo.com/content/dam/lcbo/products/075291.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg\",\"brewery\":{\"id\":13,\"name\":\"Weihenstephan Brewery\"},\"originCountry\":{\"id\":33,\"name\":\"GERMANY\"},\"style\":{\"id\":11,\"name\":\"NON_ALCOHOLIC\"},\"averageRating\":0},{\"id\":46,\"name\":\"Weihenstephan Wheat Beer\",\"abv\":5.4,\"description\":\"Wheat beer with its fine-poured white foam, smells of cloves and impresses consumers with its refreshing banana flavor. \",\"photo\":\"https://res.cloudinary.com/saucey/image/upload/v1497035194/r7lpouqddvnpgfxvu1tx.jpg\",\"brewery\":{\"id\":13,\"name\":\"Weihenstephan Brewery\"},\"originCountry\":{\"id\":33,\"name\":\"GERMANY\"},\"style\":{\"id\":15,\"name\":\"WHEAT\"},\"averageRating\":0},{\"id\":47,\"name\":\"Tuborg Guld Malt\",\"abv\":5.8,\"description\":\"\",\"photo\":\"https://www.bevco.dk/media/catalog/product/cache/1/image/480x480/0dc2d03fe217f8c83829496872af24a0/g/u/guld_tuborg_33_cl._5_6_30_flasker.png\",\"brewery\":{\"id\":6,\"name\":\"Carlsberg Group\"},\"originCountry\":{\"id\":60,\"name\":\"NETHERLANDS\"},\"style\":{\"id\":10,\"name\":\"MALT\"},\"averageRating\":4},{\"id\":48,\"name\":\"Tuborg Gold\",\"abv\":5,\"description\":\"\",\"photo\":\"http://sokakbasimeyhane.com/wp-content/uploads/2018/05/tuborg_gold_by_turktuborg-d41t2ka.jpg\",\"brewery\":{\"id\":6,\"name\":\"Carlsberg Group\"},\"originCountry\":{\"id\":60,\"name\":\"NETHERLANDS\"},\"style\":{\"id\":6,\"name\":\"GOLDEN\"},\"averageRating\":0},{\"id\":49,\"name\":\"Kronenbourg 1664\",\"abv\":5.5,\"description\":\"Kronenbourg 1664 is the most sold French beer in the world and the market leader for high-end premium beers.\",\"photo\":\"https://www.totalwine.com/dynamic/490x/media/sys_master/twmmedia/h41/h90/8802892447774.png\",\"brewery\":{\"id\":14,\"name\":\"Kronenbourg Brewery\"},\"originCountry\":{\"id\":32,\"name\":\"FRANCE\"},\"style\":{\"id\":8,\"name\":\"LAGER\"},\"averageRating\":9},{\"id\":50,\"name\":\"Ariana Lager\",\"abv\":4.5,\"description\":\"\",\"photo\":\"https://pbs.twimg.com/media/C81KOeWV0AAqKZQ.jpg\",\"brewery\":{\"id\":16,\"name\":\"Zagorka\"},\"originCountry\":{\"id\":13,\"name\":\"BULGARIA\"},\"style\":{\"id\":8,\"name\":\"LAGER\"},\"averageRating\":0}]\n\nThe content is",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "132251a1-0c4e-4978-900d-d38d6196a1f4",
+			"name": "UpdateBeer",
+			"url": "localhost:8080/api/v1/beers/58",
+			"description": "",
+			"data": [],
+			"dataOptions": null,
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\n        \"name\": \"Heinekennnnn\",\n        \"abv\": 5.0,\n        \"description\": \"Bright\",\n        \"photo\": null,\n        \"brewery\": {\n            \"id\": 2,\n            \"name\": \"Beck's Brewery\"\n        },\n        \"originCountry\": {\n            \"id\": 2,\n            \"name\": \"ANGOLA\"\n        },\n        \"style\": {\n            \"id\": 2,\n            \"name\": \"AMBER\"\n        }\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "159b7023-e9ef-47e0-93ec-0c06a3269403",
+			"name": "GetUserById",
+			"url": "localhost:8080/api/v1/users/1",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "16cebc6d-de8c-45b5-90d6-863684dab063",
+			"name": "GetAvgOfBeer",
+			"url": "localhost:8080/api/v1/beers/1/avg_rating",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "1b15e2a0-b572-4848-8f0e-bf356945ea14",
+			"name": "AddRatingToBeer",
+			"url": "localhost:8080/api/v1/users/1/beers/1/addRating/2",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "e9bd438a-430a-4848-b2e4-a7308db76e94",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "21a0f707-9d1b-4fb2-999f-be3dcbd6469f",
+			"name": "getTop3MostRankedUserBeers",
+			"url": "localhost:8080/api/v1/users/21/beers/top3",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "7a779e3a-dda4-4e5c-81ce-fd323fdb1420",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "29eba95f-420f-4190-9b7f-0c34169dad3d",
+			"name": "GetAllUsers",
+			"url": "localhost:8080/api/v1/users",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "3af6d9dd-d323-4152-affe-6aebcf46600f",
+			"name": "getAll",
+			"url": "localhost:8080/api/v1/users",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "7a779e3a-dda4-4e5c-81ce-fd323fdb1420",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "4a916f5b-98a4-428a-b16d-a671ff8e563e",
+			"name": "update",
+			"url": "localhost:8080/api/v1/users/1",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "7a779e3a-dda4-4e5c-81ce-fd323fdb1420",
+			"rawModeData": "{\n        \"id\": 1,\n        \"userName\": \"kristian\",\n        \"email\": \"kristian.ivanov@gmail.com\",\n        \"password\": \"kristianpass5\",\n        \"photo\": null\n    }",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "4c1227d4-9e4c-435b-8ec6-39ea0e9b72f5",
+			"name": "UpdateUserById",
+			"url": "localhost:8080/api/v1/users/1",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n        \"id\": 1,\n        \"userName\": \"mitko.ivanov\",\n        \"email\": \"fffffffff@sddd\",\n        \"password\": \"kristianpass5\",\n        \"photo\": \"ffffffffffffff\"\n    }",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "55b1ff95-e50c-4a87-ac26-a9b4838f40b9",
+			"name": "getById",
+			"url": "localhost:8080/api/v1/users/1",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "7a779e3a-dda4-4e5c-81ce-fd323fdb1420",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "62f0911e-49a5-442a-80a1-e5112d0f62c6",
+			"name": "create",
+			"url": "localhost:8080/api/v1/users",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "7a779e3a-dda4-4e5c-81ce-fd323fdb1420",
+			"rawModeData": "{\n    \"userName\": \"YAVOR\",\n    \"email\": \"yavoryankov@abv.com\",\n    \"password\": \"yavor40\",\n    \"photo\": null\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "631a69ab-6790-4830-a5e0-79e7edc8c96c",
+			"name": "CreateUser",
+			"url": "localhost:8080/api/v1/users",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n        \"id\": 3,\n        \"userName\": \"rosennnnn40\",\n        \"email\": \"alexexandra.smith@gmail.com\",\n        \"password\": \"888888888888888888888888\",\n        \"photo\": \"\"\n    }",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "6a479110-96e7-455c-8582-ed65d14185d3",
+			"name": "GetAllRatedUserBeers",
+			"url": "localhost:8080/api/v1/users/2/rated_beers",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "736d3977-3902-40a0-bf6a-873c54c952bf",
+			"name": "GetAllBeers",
+			"url": "localhost:8080/api/v1/beers",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "76b20e8f-916a-41c1-8804-ac920b6849e5",
+			"name": "getAllStatusOfBeer",
+			"url": "localhost:8080/api/v1/beers/2/allStatuses",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "02e62578-97dc-406e-abf6-a1333bb6427f",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "944e70b5-420a-45bc-945a-c271962a5d32",
+			"name": "GetStatusByUserToBeer",
+			"url": "localhost:8080/api/v1/users/5/beers/2/status",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "02e62578-97dc-406e-abf6-a1333bb6427f",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "96555fdd-e3c6-4a86-8c3d-7d683c1260ce",
+			"name": "GetAverageRatingOfBeer",
+			"url": "localhost:8080/api/v1/beers/22/avg_rating",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "e9bd438a-430a-4848-b2e4-a7308db76e94",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "9b283d89-d230-4764-ab75-f66f9d2d1161",
+			"name": "deleteStatus",
+			"url": "localhost:8080/api/v1/users/1/beers/1/deleteStatus",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "02e62578-97dc-406e-abf6-a1333bb6427f",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "9baa9281-0b1d-4d3e-accb-9f7e88ea3435",
+			"name": "AddTagToBeer",
+			"url": "localhost:8080/api/v1/beers/6/addTag/wild",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "a885794c-49a8-431b-8845-9907d1f48372",
+			"name": "sortByRating",
+			"url": "localhost:8080/api/v1/beers/sorted?sort=rating_asc",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "sort",
+					"value": "rating_asc",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": "7a779e3a-dda4-4e5c-81ce-fd323fdb1420",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "adf7992d-c8fb-4e27-a730-52418655027c",
+			"name": "addStatusToBeer",
+			"url": "localhost:8080/api/v1/users/1/beers/1/addStatus/1",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "02e62578-97dc-406e-abf6-a1333bb6427f",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "afbc974a-a5a3-48ea-9b0c-f0f0228c17e5",
+			"name": "getTop3MostRankedUserBeers",
+			"url": "localhost:8080/api/v1/users/22/beers/top3",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "7a779e3a-dda4-4e5c-81ce-fd323fdb1420",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "b23e7fb5-7fbe-410d-b9da-79b8d20b07ce",
+			"name": "DeleteUserById",
+			"url": "localhost:8080/api/v1/users/35",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"pathVariables": {}
+		},
+		{
+			"id": "b362df62-79c5-4012-9880-7f727a4579e0",
+			"name": "CreateUser",
+			"url": "localhost:8080/api/v1/users",
+			"description": null,
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"description": null,
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"type": "text",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": null,
+			"rawModeData": "{\n    \"id\": 30,\n    \"userName\": \"yavorv\",\n    \"email\": \"yavor@gmail.com\",\n    \"password\": \"passssssssss\",\n    \"photo\": null\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "b6408b89-98b9-43d9-b49d-ecc6e14db8e0",
+			"name": "getByABV",
+			"url": "localhost:8080/api/v1/beers/byABV?abv=5.3",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "abv",
+					"value": "5.3",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": "7a779e3a-dda4-4e5c-81ce-fd323fdb1420",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "c15852ac-6e4a-424b-8d6f-70311381aed7",
+			"name": "FIlterByRating",
+			"url": "localhost:8080/api/v1/beers/filtered?tag=tasty",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "tag",
+					"value": "tasty",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"rawModeData": "{\n    \"id\": 3,\n    \"name\": \"Amstel\",\n    \"abv\": 8.4,\n    \"description\": null,\n    \"photo\": null,\n    \"brewery\": {\n        \"id\": 4,\n        \"name\": \"Budvar\"\n    },\n    \"originCountry\": {\n        \"id\": 37,\n        \"name\": \"ICELAND\"\n    },\n    \"style\": {\n        \"id\": 2,\n        \"name\": \"AMBER\"\n    }\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "c15decaf-055e-4e05-8370-540282471047",
+			"name": "DeleteRatingFromBeer",
+			"url": "localhost:8080/api/v1/users/1/beers/1/deleteRating",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "e9bd438a-430a-4848-b2e4-a7308db76e94",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "c4a3237c-0761-41da-aed3-ad6764b5159d",
+			"name": "DeleteBeer",
+			"url": "localhost:8080/api/v1/beers/57",
+			"description": "",
+			"data": [],
+			"dataOptions": null,
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "cb02b59f-9ef7-4fe6-a6da-68d7f9215c25",
+			"name": "FIlterByCountry",
+			"url": "localhost:8080/api/v1/beers/filtered?country=ANGOLA",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "country",
+					"value": "ANGOLA",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"rawModeData": "{\n    \"id\": 3,\n    \"name\": \"Amstel\",\n    \"abv\": 8.4,\n    \"description\": null,\n    \"photo\": null,\n    \"brewery\": {\n        \"id\": 4,\n        \"name\": \"Budvar\"\n    },\n    \"originCountry\": {\n        \"id\": 37,\n        \"name\": \"ICELAND\"\n    },\n    \"style\": {\n        \"id\": 2,\n        \"name\": \"AMBER\"\n    }\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "d9060a4c-5221-411b-bb14-57f4f7f456e8",
+			"name": "FIlterByTag",
+			"url": "localhost:8080/api/v1/beers/filtered?tag=bitter",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "tag",
+					"value": "bitter",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "d9557151-3b8d-4a35-aaea-59b2995cf310",
+			"name": "FIlterByStyle",
+			"url": "localhost:8080/api/v1/beers/filtered?status=drank",
+			"description": "",
+			"data": [],
+			"dataOptions": null,
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "status",
+					"value": "drank",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"rawModeData": "{\n    \"id\": 3,\n    \"name\": \"Amstel\",\n    \"abv\": 8.4,\n    \"description\": null,\n    \"photo\": null,\n    \"brewery\": {\n        \"id\": 4,\n        \"name\": \"Budvar\"\n    },\n    \"originCountry\": {\n        \"id\": 37,\n        \"name\": \"ICELAND\"\n    },\n    \"style\": {\n        \"id\": 2,\n        \"name\": \"AMBER\"\n    }\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "e7813d53-e8f5-4aaa-b381-69d2d14ed7b9",
+			"name": "CreateBeer",
+			"url": "localhost:8080/api/v1/beers",
+			"description": "",
+			"data": [],
+			"dataOptions": null,
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"name": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\t\"name\": \"MyBeer\",\n        \"abv\": 8.0,\n        \"description\": \"Bright and deep golden\",\n        \"photo\": null,\n        \n        \"brewery\": {\n            \"id\": 18\n        },\n        \n        \"originCountry\": {\n            \"id\": 60\n           \n           },\n        \"style\": {\n            \"id\": 8\n        }\n}\n  ",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ef4a2abf-2530-417e-b0aa-ffe4469f3c2b",
+			"name": "delete",
+			"url": "localhost:8080/api/v1/users/6",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "7a779e3a-dda4-4e5c-81ce-fd323fdb1420",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "fa772562-7905-4b47-be1f-613ea3472b9d",
+			"name": "GetAllStatusedUserBeers",
+			"url": "localhost:8080/api/v1/users/2/beers",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		}
+	]
+}

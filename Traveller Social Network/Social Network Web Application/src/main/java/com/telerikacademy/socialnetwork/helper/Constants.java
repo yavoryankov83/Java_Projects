@@ -9,9 +9,9 @@ public final class Constants {
   public static final String USER_DEFAULT_NAME =
           "Anonymous";
   public static final String USER_DEFAULT_PHOTO =
-          "/home/yavor/Desktop/social_network_web_application/Social Network Web Application/uploads/default_user_photo.jpg";
+          "src/main/resources/static/default-images/default_user_photo.jpg";
   public static final String COVER_DEFAULT_PHOTO =
-          "/home/yavor/Desktop/social_network_web_application/Social Network Web Application/uploads/default_cover_photo.jpg";
+          "src/main/resources/static/default-images/default_cover_photo.jpg";
   public static final String EMAIL_VALIDATION_REGEX =
           "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:" +
                   "\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c" +
@@ -70,7 +70,7 @@ public final class Constants {
   public static final String LOCATION_ERROR_MESSAGE =
           "Location should be less or equal to 255 symbols long.";
   public static final String POST_DEFAULT_PHOTO =
-          "/home/yavor/Desktop/social_network_web_application/Social Network Web Application/uploads/default_post_photo.jpg";
+          "src/main/resources/static/default-images/default_post_photo.jpg";
   public  static final Integer POSTS_INITIAL_SIZE_PER_PAGE = 3;
 
   //COMMENTS MESSAGES

@@ -7,6 +7,7 @@ import com.telerikacademy.socialnetwork.services.contracts.PostService;
 import com.telerikacademy.socialnetwork.services.contracts.UserService;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -35,6 +36,7 @@ public class PostRestController {
           @ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
   })
   @GetMapping
+  @ResponseStatus(code = HttpStatus.OK)
   public List<Post> getAll() {
     return postService.getAllPosts();
   }
@@ -47,6 +49,7 @@ public class PostRestController {
           @ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
   })
   @GetMapping(path = "public")
+  @ResponseStatus(code = HttpStatus.OK)
   public List<Post> getAllPublic() {
     return postService.getAllPublicPosts();
   }
@@ -59,6 +62,7 @@ public class PostRestController {
           @ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
   })
   @GetMapping(path = "public/pageable")
+  @ResponseStatus(code = HttpStatus.OK)
   public List<Post> getAllPublic(@ApiParam(value = "Current page number to display post objects", required = true)
                                  @Valid @RequestParam(name = "page") Integer page,
                                  @ApiParam(value = "Number of post objects to display on current page", required = true)
@@ -74,12 +78,14 @@ public class PostRestController {
           @ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
   })
   @GetMapping(path = "publicDTO")
+  @ResponseStatus(code = HttpStatus.OK)
   public List<PostDTO> getAllPublicDTOS() {
     return postService.getAllPublicPostsDTO();
   }
 
   @ApiOperation(value = "Get post by ID", response = Post.class)
   @GetMapping(path = "{id}")
+  @ResponseStatus(code = HttpStatus.OK)
   public Post getById(@ApiParam(value = "Post id from which post object will retrieve", required = true)
                       @Valid @PathVariable(name = "id") Integer postId) {
     return postService.getPostById(postId);
@@ -87,6 +93,7 @@ public class PostRestController {
 
   @ApiOperation(value = "Get all posts by User", response = List.class)
   @GetMapping(path = "users/{id}")
+  @ResponseStatus(code = HttpStatus.OK)
   public List<Post> getByUser(@ApiParam(value = "User id from which posts objects will retrieve", required = true)
                               @Valid @PathVariable(name = "id") Integer userId) {
     User userById = userService.getUserById(userId);
@@ -95,6 +102,7 @@ public class PostRestController {
 
   @ApiOperation(value = "Get all posts by User pageable", response = List.class)
   @GetMapping(path = "users/{id}/pageable")
+  @ResponseStatus(code = HttpStatus.OK)
   public List<Post> getByUser(@ApiParam(value = "User id from which posts objects will retrieve", required = true)
                               @Valid @PathVariable(name = "id") Integer userId,
                               @ApiParam(value = "Current page number to display post objects", required = true)
@@ -107,12 +115,14 @@ public class PostRestController {
   }
 
   @GetMapping(path = "public/filtered")
+  @ResponseStatus(code = HttpStatus.OK)
   public List<Post> getAllByFilter(@RequestParam @Valid String filterParam) {
     return postService.filterPostsByUsernameAndEmailAndFirstNameAndLastName(filterParam);
   }
 
   @ApiOperation(value = "Get all visible post for user", response = List.class)
   @GetMapping(path = "allFeeds")
+  @ResponseStatus(code = HttpStatus.OK)
   public List<Post> getPostsVisibleForUser(@ApiParam(value = "Principal who want to get feeds", required = true)
                                                    Principal principal) {
 
@@ -121,8 +131,12 @@ public class PostRestController {
 
   @ApiOperation(value = "Create post", response = void.class)
   @PostMapping
+  @ResponseStatus(code = HttpStatus.CREATED)
   public void create(@ApiParam(value = "Post object store in database table", required = true)
-                     @Valid @RequestBody Post post) {
+                     @Valid @RequestBody Post post,
+                     Principal principal) {
+    User user = userService.getPrincipal(principal);
+    post.setUser(user);
     postService.createPost(post);
   }
 
@@ -132,6 +146,7 @@ public class PostRestController {
           @ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
   })
   @PutMapping(path = "{id}")
+  @ResponseStatus(code = HttpStatus.OK)
   public void update(@ApiParam(value = "Post Id to update post object", required = true)
                      @Valid @PathVariable(name = "id") Integer postId,
                      @ApiParam(value = "Update post object", required = true)
@@ -150,3 +165,4 @@ public class PostRestController {
     postService.deletePost(postId);
   }
 }
+

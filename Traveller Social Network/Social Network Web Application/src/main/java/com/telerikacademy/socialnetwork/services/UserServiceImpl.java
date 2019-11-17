@@ -322,7 +322,9 @@ public class UserServiceImpl implements com.telerikacademy.socialnetwork.service
   }
 
   private void setDefaultUserPhoto(User userToCreate) {
-    String filePath = Constants.USER_DEFAULT_PHOTO;
+    File defaultUserPhoto = new File(Constants.USER_DEFAULT_PHOTO);
+    String filePath = defaultUserPhoto.getAbsolutePath();
+
     File file = new File(filePath);
     byte[] userDefaultPhoto = new byte[(int) file.length()];
 
@@ -335,7 +337,9 @@ public class UserServiceImpl implements com.telerikacademy.socialnetwork.service
   }
 
   private void setDefaultCoverPhoto(User userToCreate) {
-    String filePath = Constants.COVER_DEFAULT_PHOTO;
+    File defaultCoverPhoto = new File(Constants.COVER_DEFAULT_PHOTO);
+    String filePath = defaultCoverPhoto.getAbsolutePath();
+
     File file = new File(filePath);
     byte[] coverDefaultPhoto = new byte[(int) file.length()];
 
@@ -359,3 +363,4 @@ public class UserServiceImpl implements com.telerikacademy.socialnetwork.service
     }
   }
 }
+
