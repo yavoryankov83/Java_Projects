@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:include="~{fragments/head}"></th:block>
+    <title>NEW BEER</title>
+</head>
+<body>
+<form class="form" th:action="@{/}" method="get">
+    <input type="submit" class="btn btn-primary btn-lg" value="HOME">
+</form>
+<form id="create" action="#" th:action="@{/beers/create}" th:object="${beerDTO}" method="post">
+    <br/>
+    <label th:text="#{message.beer.name}">Name</label>
+    <input type="text" th:field="*{name}" autofocus required/>
+    <br>
+    <br>
+    <label th:text="#{message.beer.ABV}">ABV</label>
+    <input type="number" min="0" step="0.01" th:field="*{abv}" required/>
+    <br>
+    <br>
+    <label th:text="#{message.beer.description}">Description</label>
+    <input type="text" th:field="*{description}"/>
+    <br>
+    <br>
+    <label th:text="#{message.beer.photo}">Photo</label>
+    <input type="url" th:field="*{photo}"/>
+    <br/>
+    <br/>
+    <a>STYLE </a>
+    <select th:field="*{style}">
+        <option th:each="style : ${styles}"
+                th:value="${style.getName()}" th:text="${style.getName()}"></option>
+    </select>
+    <br>
+    <br>
+    <label th:text="#{message.beer.brewery}">Brewery</label>
+    <input type="text" th:field="*{brewery}" required/>
+    <br>
+    <br/>
+    <a>COUNTRY </a>
+    <select th:field="*{originCountry}">
+        <option th:each="country : ${countries}"
+                th:value="${country.getName()}" th:text="${country.getName()}"></option>
+    </select>
+    <br/>
+    <br/>
+    <input type="submit" class="btn btn-primary btn-lg" value="Create BEER">
+</form>
+</body>
+</html>

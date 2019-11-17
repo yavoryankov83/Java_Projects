@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:include="~{fragments/head}"></th:block>
+    <title>NEW RATING</title>
+</head>
+<body>
+<form class="form" th:action="@{/}" method="get">
+    <input type="submit" class="btn btn-primary btn-lg" value="HOME">
+</form>
+<form id="create" action="#"
+      th:action="@{/beers/{beerId}/addStatus (beerId=${beer.getId()})}"
+      th:object="${status}" method="post">
+    <br/>
+    <a> MARK BEER </a>
+    <select th:field="*{statusValue}">
+        <option th:each="statusValue : ${statusValues}"
+                th:value="${statusValue.getStatusValue()}"
+                th:text="${statusValue.getStatusValue()}"></option>
+    </select>
+    <br>
+    <br>
+    <input id="markBeer" type="submit" class="btn btn-primary btn-lg" value="MARK BEER">
+</form>
+<div id="h1"> Text</div>
+</body>
+</html>

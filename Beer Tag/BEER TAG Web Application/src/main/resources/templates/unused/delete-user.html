@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:include="~{fragments/head}"></th:block>
+    <title>Delete User</title>
+</head>
+
+<body>
+<form class="form" th:action="@{/}" method="get">
+    <input type="submit" class="btn btn-primary btn-lg" value="HOME">
+</form>
+
+<form th:action="@{/users/delete/{id}(id=${userToDelete.getId()})}" th:object="${userToDelete}" method="post">
+    <br>
+    <label th:text="#{user.header.warning}">Warning</label>
+    <input type="text" th:field="*{id}"/>
+    <br>
+    <input type="submit" class="btn btn-danger" value="DELETE USER">
+</form>
+</body>
+</html>

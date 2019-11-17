@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:include="~{fragments/head}"></th:block>
+    <title>Delete beer</title>
+</head>
+<body>
+<form class="form" th:action="@{/}" method="get">
+    <input type="submit" class="btn btn-primary btn-lg" value="HOME">
+</form>
+<form th:action="@{/beers/delete/{id}(id=${beer.getId()})}" th:object="${beer}" method="post">
+    <br>
+    <label th:text="#{beer.header.warning}">Warning</label>
+    <input type="text" th:field="*{id}"/>
+    <br>
+    <br/>
+    <input type="submit" class="btn btn-primary btn-lg" value="DELETE BEER">
+</form>
+</body>
+</html>

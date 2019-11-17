@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:include="~{fragments/head}"></th:block>
+    <title>Login</title>
+</head>
+<body>
+<form class="form" th:action="@{/}" method="get">
+    <input type="submit" class="btn btn-primary btn-lg" value="HOME">
+</form>
+<br>
+<br>
+<h2>Login Page</h2>
+<p>
+    <i th:if="${param.error}" class="error">Wrong username or password.</i>
+</p>
+<p>
+    <i th:if="${param.logout}">You have been successfully logged out.</i>
+</p>
+<form th:action="@{/authenticate}" method="post">
+    <div class="col-2">
+        <label for="username">Username:</label>
+        <input type="text" id="username" class="form-control" name="username"
+               th:placeholder="username" autofocus autocomplete required min="3" max="50"/>
+        <small class="text-muted">Must be 3-50 characters long.</small>
+    </div>
+    <br>
+    <div class="col-2">
+        <label for="password">Password:</label>
+        <input type="text" id="password" class="form-control" name="password"
+               th:placeholder="password" autocomplete required min="6"/>
+        <small class="text-muted">Must be more than 6 characters long.</small>
+    </div>
+    <br/>
+    <input type="submit" class="btn btn-primary btn-lg" value="LOGIN">
+</form>
+<br>
+<form class="form" th:action="@{/register}" method="get">
+    <input type="submit" class="btn btn-secondary btn-lg" value="REGISTER">
+</form>
+</body>
+</html>

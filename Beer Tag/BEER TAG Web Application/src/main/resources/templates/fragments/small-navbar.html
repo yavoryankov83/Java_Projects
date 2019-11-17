@@ -1,0 +1,41 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<th:block th:fragment>
+    <form class="form" th:action="@{/}" method="get">
+        <button type="submit" class="btn btn-primary btn-lg float-right" value="HOME"><i class="fa fa-fw fa-home"></i>
+            HOME
+        </button>
+    </form>
+
+    <form sec:authorize="hasRole('ROLE_USER')" class="form" th:action="@{/logout}" method="post">
+        <button type="submit" class="btn btn-success btn-lg float-right" value="LOGOUT"><i class="fa fa-fw fa-user"></i>
+            LOGOUT
+        </button>
+    </form>
+
+    <form class="form" th:action="@{/users}" method="get">
+        <button type="submit" class="btn btn-dark btn-lg float-right" value="USERS"><i class="fa fa-users"></i> USERS
+        </button>
+    </form>
+
+    <form class="form" th:action="@{/beers}" method="get">
+        <button type="submit" class="btn btn-info    btn-lg float-right" value="BEERS"><i class="fa fa-beer"></i> BEERS
+        </button>
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            'use strict';
+            let prevScrollpos = window.pageYOffset;
+            window.onscroll = function () {
+                let currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("navbar").style.top = "0";
+                } else {
+                    document.getElementById("navbar").style.top = "-50px";
+                }
+                prevScrollpos = currentScrollPos;
+            }
+        });
+    </script>
+</th:block>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:include="~{fragments/head}"></th:block>
+    <title>Registers</title>
+</head>
+<body>
+<form class="form" th:action="@{/}" method="get">
+    <input type="submit" class="btn btn-primary btn-lg" value="HOME">
+</form>
+<br>
+<br>
+<h2>Register Page</h2>
+<p>
+    <i th:if="${error != null}" style="color: red" th:text="${error}" class="error"></i>
+</p>
+<div>
+    <form action="#" th:action="@{/register}" th:object="${user}" method="post">
+        <div class="col-2">
+            <label for="username" style="color: red" th:errors="*{username}" th:text="#{user.invalidUsername}">Username
+                error</label>
+            <label for="username">Username:</label>
+            <input type="text" id="username" class="form-control" th:field="*{username}" name="username"
+                   th:placeholder="username" autofocus autocomplete required min="3" max="50"/>
+            <small class="text-muted">Must be 3-50 characters long.</small>
+        </div>
+        <br>
+        <div class="col-2">
+            <label for="password" style="color: red" th:errors="*{password}" th:text="#{user.invalidPassword}">Password
+                error</label>
+            <label for="password">Password:</label>
+            <input type="text" id="password" class="form-control" th:field="*{password}" name="password"
+                   th:placeholder="password" autocomplete required min="6" minlength="6"/>
+            <small class="text-muted">Must be more than 6 characters long.</small>
+        </div>
+        <br/>
+        <div class="col-2">
+            <label for="confirmpassword">Confirm Password:</label>
+            <input type="password" id="confirmpassword" class="form-control" th:field="*{passwordConfirmation}"
+                   name="password"
+                   th:placeholder="password" autocomplete required min="6"/>
+            <small class="text-muted">Must be more than 6 characters long.</small>
+        </div>
+        <br/>
+        <div class="col-2">
+            <label for="email" style="color: red" th:errors="*{email}" th:text="#{user.invalidEmail}">Email
+                error</label>
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="form-control" th:field="*{email}" name="email"
+                   th:placeholder="email" autocomplete required min="10" max="50"/>
+            <small class="text-muted">Must be 10-50 characters long.</small>
+        </div>
+        <br>
+        <div class="col-2">
+            <label for="photo">Photo:</label>
+            <input type="url" id="photo" class="form-control" th:field="*{photo}" name="photo"
+                   th:placeholder="photo" autocomplete/>
+            <small class="text-muted">Must be URL address.</small>
+        </div>
+        <br>
+        <input type="submit" class="btn btn-primary btn-lg" value="REGISTER">
+    </form>
+    <br>
+    <form class="form" th:action="@{/login}" method="get">
+        <input type="submit" class="btn btn-secondary btn-lg" value="LOGIN">
+    </form>
+</div>
+</body>
+</html>

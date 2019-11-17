@@ -1,0 +1,148 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<th:block th:fragment>
+    <form class="form" th:action="@{/}" method="get">
+        <button type="submit" class="btn btn-primary btn-lg float-right" value="HOME"><i class="fa fa-fw fa-home"></i>
+            HOME
+        </button>
+    </form>
+
+    <!-- Button trigger modal -->
+    <button sec:authorize="!isAuthenticated()" type="button" class="btn btn-success btn-lg float-right"
+            data-toggle="modal" data-target="#loginform"
+            value="LOGIN"><i class="fa fa-fw fa-user"></i> LOGIN
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="loginform" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login user Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="login" th:action="@{/authenticate}" method="post">
+                        <div class="col-7">
+                            <label for="username" th:text="#{user.header.username}">Username:</label>
+                            <input type="text" id="username" class="form-control" name="username"
+                                   th:placeholder="username" autofocus autocomplete required minlength="3"
+                                   maxlength="50"/>
+                            <small class="text-muted">Must be 3-50 characters long.</small>
+                        </div>
+                        <br>
+                        <div class="col-7">
+                            <label for="password" th:text="#{user.header.password}">Password:</label>
+                            <input type="password" id="password" class="form-control" name="password"
+                                   th:placeholder="password" autocomplete required minlength="4"/>
+                            <small class="text-muted">Must be more than 3 characters long.</small>
+                        </div>
+                        <br>
+                    </form>
+                    <!--                    <form class="form" th:action="@{/register}" method="get">-->
+                    <!--                        <input type="submit" class="btn btn-secondary btn-lg" value="REGISTER">-->
+                    <!--                    </form>-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" form="login" class="btn btn-success"><i class="fa fa-fw fa-user"></i> Login
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form sec:authorize="hasRole('ROLE_USER')" class="form" th:action="@{/logout}" method="post">
+        <button type="submit" class="btn btn-success btn-lg float-right" value="LOGOUT"><i class="fa fa-fw fa-user"></i>
+            LOGOUT
+        </button>
+    </form>
+
+    <form class="form" th:action="@{/users}" method="get">
+        <button type="submit" class="btn btn-dark btn-lg float-right" value="USERS"><i class="fa fa-users"></i> USERS
+        </button>
+    </form>
+
+    <form class="form" th:action="@{/beers}" method="get">
+        <button type="submit" class="btn btn-info    btn-lg float-right" value="BEERS"><i class="fa fa-beer"></i> BEERS
+        </button>
+    </form>
+
+    <!-- Button trigger modal -->
+    <button sec:authorize="!isAuthenticated()" type="button" class="btn btn-success btn-lg float-right"
+            data-toggle="modal" data-target="#register"
+            value="REGISTER"><i class="fa fa-fw fa-users"></i> REGISTER
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="register" role="dialog" aria-labelledby="modalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Register user Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="reg" th:action="@{/register}" th:object="${user}" method="post">
+                        <div class="col-7">
+                            <label for="username" style="color: red" th:errors="*{username}"
+                                   th:text="#{user.invalidUsername}">Username
+                                error</label>
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" class="form-control" th:field="*{username}" name="username"
+                                   th:placeholder="username" th:autocomplete="off" autofocus required minlength="3"
+                                   maxlength="50"/>
+                            <small class="text-muted">Must be 3-50 characters long.</small>
+                        </div>
+                        <br>
+                        <div class="col-7">
+                            <label for="password" style="color: red" th:errors="*{password}"
+                                   th:text="#{user.invalidPassword}">Password
+                                error</label>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" class="form-control" th:field="*{password}"
+                                   name="password"
+                                   th:placeholder="password" th:autocomplete="off" required minlength="4"/>
+                            <small class="text-muted">Must be more than 3 characters long.</small>
+                        </div>
+                        <br/>
+                        <div class="col-7">
+                            <label for="confirmpassword">Confirm Password:</label>
+                            <input type="password" id="confirmpassword" class="form-control"
+                                   th:field="*{passwordConfirmation}"
+                                   name="password"
+                                   th:placeholder="password" th:autocomplete="off" required minlength="4"/>
+                            <small class="text-muted">Must be more than 3 characters long.</small>
+                        </div>
+                        <br/>
+                        <div class="col-7">
+                            <label for="email" style="color: red" th:errors="*{email}" th:text="#{user.invalidEmail}">Email
+                                error</label>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" class="form-control" th:field="*{email}" name="email"
+                                   th:placeholder="email" th:autocomplete="off" required minlength="10" maxlength="50"/>
+                            <small class="text-muted">Must be 10-50 characters long.</small>
+                        </div>
+                        <br>
+                        <div class="col-7">
+                            <label for="photo">Photo:</label>
+                            <input type="url" id="photo" class="form-control" th:field="*{photo}" name="photo"
+                                   th:placeholder="photo"/>
+                            <small class="text-muted">Must be URL address.</small>
+                        </div>
+                        <br>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" form="reg" class="btn btn-success"><i class="fa fa-fw fa-users"></i> Register
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</th:block>

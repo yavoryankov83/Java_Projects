@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <th:block th:include="~{fragments/head}"></th:block>
+    <title>Beer Details</title>
+</head>
+
+<body>
+
+<th:block th:include="~{fragments/small-navbar}"></th:block>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#updateBeer"
+        value="UPDATE"><i class="fa fa-fw fa-beer"></i> UPDATE
+</button>
+<!-- Modal -->
+<div class="modal fade" id="updateBeer" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Update beer Form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="update" th:action="@{/beers/update/{id}(id=${getBeer.getId()})}"
+                      th:object="${beerDTO}"
+                      method="post">
+                    <div class="col-7">
+                        <label for="beername" style="color: red" th:errors="*{name}" th:text="#{beer.invalidBeername}">Beer
+                            name
+                            error</label>
+                        <label for="beername" th:text="#{message.beer.name}">Name:</label>
+                        <input type="text" id="beername" class="form-control" name="beername" th:field="*{name}"
+                               th:placeholder="beername" autofocus required minlength="3" maxlength="50"/>
+                        <small class="text-muted">Must be 3-50 characters long.</small>
+                    </div>
+                    <br>
+                    <div class="col-7">
+                        <label for="abv" style="color: red" th:errors="*{abv}" th:text="#{beer.header.beerAbv}">ABV
+                            error</label>
+                        <label for="abv">ABV:</label>
+                        <input type="number" min="0" step="0.1" id="abv" class="form-control" th:field="*{abv}"
+                               name="abv"
+                               autocomplete required/>
+                        <small class="text-muted">Must be min 0.0 value.</small>
+                    </div>
+                    <br/>
+                    <div class="col-7">
+                        <label for="description" style="color: red" th:errors="*{description}"
+                               th:text="#{beer.invalidBeerDescription}">Description
+                            error</label>
+                        <label for="description" th:text="#{table.beer.description}">Description:</label>
+                        <input type="text" id="description" class="form-control" name="description"
+                               th:field="*{description}"
+                               th:placeholder="description" autocomplete/>
+                    </div>
+                    <br>
+                    <div class="col-7">
+                        <label for="photo" th:text="#{message.beer.photo}">Photo:</label>
+                        <input type="url" id="photo" class="form-control" name="photo" th:field="*{photo}"
+                               th:placeholder="photo" autocomplete/>
+                        <small class="text-muted">Must be URL address.</small>
+                    </div>
+                    <br>
+                    <div class="col-7">
+                        <label for="style" th:text="#{beer.style}">Style:</label>
+                        <select id="style" th:field="*{style}">
+                            <option th:each="style : ${styles}"
+                                    th:value="${style.getName()}" th:text="${style.getName()}"></option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="col-7">
+                        <label for="brewery" th:text="#{message.beer.brewery}">Brewery:</label>
+                        <input type="text" id="brewery" class="form-control" name="brewery" th:field="*{brewery}"
+                               th:placeholder="brewery" required minlength="3" maxlength="50"/>
+                        <small class="text-muted">Must be 3-50 characters long.</small>
+                    </div>
+                    <br>
+                    <div class="col-7">
+                        <label for="country" th:text="#{beer.country}">Country:</label>
+                        <select id="country" th:field="*{originCountry}">
+                            <option th:each="country : ${countries}"
+                                    th:value="${country.getName()}" th:text="${country.getName()}"></option>
+                        </select>
+                    </div>
+                    <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" form="update" class="btn btn-info"><i class="fa fa-fw fa-beer"></i> Update
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form class="form" th:action="@{/beers/delete/{id}(id=${getBeer.getId()})}" th:object="${getBeer}"
+      method="post">
+    <button type="submit" class="btn btn-danger btn-lg" value="DELETE"><i class="fa fa-fw fa-trash"></i> DELETE</button>
+</form>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#beerRate"
+        value="GIVE RATE"><i class="fa fa-fw fa-beer"></i> GIVE RATE
+</button>
+<!-- Modal -->
+<div id="beerRate" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Rate beer Form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="rate" th:action="@{/beers/{beerId}/addRating (beerId=${getBeer.getId()})}"
+                      th:object="${newRating}"
+                      method="post">
+                    <div class="col-7">
+                        <label for="newRating" th:text="#{message.beer.rating}">Rating:</label>
+                        <input type="number" id="newRating" class="form-control" name="rating" th:field="*{ratingValue}"
+                               autofocus autocomplete required min="1" max="10"/>
+                        <small class="text-muted">Must be 1-10 number.</small>
+                    </div>
+                    <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" form="rate" class="btn btn-info"><i class="fa fa-fw fa-beer"></i> Give Rate
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#beerStatus"
+        value="GIVE STATUS"><i class="fa fa-fw fa-beer"></i> GIVE STATUS
+</button>
+<!-- Modal -->
+<div id="beerStatus" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="beerStatus"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Give status beer Form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="addStatus" th:action="@{/beers/{beerId}/addStatus (beerId=${getBeer.getId()})}"
+                      th:object="${status}"
+                      method="post">
+                    <div class="col-7">
+                        <label for="status1" th:text="#{message.beer.status}">Give status:</label>
+                        <select id="status1" th:field="*{statusValue}">
+                            <option th:each="statusValue : ${statusValues}"
+                                    th:value="${statusValue.getStatusValue()}"
+                                    th:text="${statusValue.getStatusValue()}"></option>
+                        </select>
+                    </div>
+                    <br>
+                    <h1 align="center" id="addInfo"></h1>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="giveStatus" type="submit" form="addStatus" class="btn btn-info"><i
+                        class="fa fa-fw fa-beer"></i> Give status
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#beerTag"
+        value="ADD TAG"><i class="fa fa-fw fa-beer"></i> ADD TAG
+</button>
+<!-- Modal -->
+<div id="beerTag" class="modal fade" role="dialog" aria-labelledby="beerTag"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add tag beer Form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="addTag" th:action="@{/beers/addTag/{id}(id=${getBeer.getId()})}" th:object="${tag}"
+                      method="post">
+                    <div class="col-7">
+                        <label for="tag" th:text="#{message.beer.tag}">Tag:</label>
+                        <input type="text" id="tag" class="form-control" name="tag" th:field="*{name}"
+                               th:placeholder="tag" autofocus autocomplete required/>
+                    </div>
+                    <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" form="addTag" class="btn btn-info"><i class="fa fa-fw fa-beer"></i> Add tag
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#rating"
+        value="RATING"><i class="fa fa-fw fa-beer"></i> RATING
+</button>
+<!-- Modal -->
+<div class="modal fade" id="rating" tabindex="-1" role="dialog" aria-labelledby="rating"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 th:text="${#strings.concat('User ', username, ' rating:')}" class="modal-title">User Rating</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <span>AVERAGE RATING: </span>
+                <span th:text="${getBeer.getAverageRating()}" th:object="${getBeer}"></span>
+                <br>
+                <span>YOUR RATING: </span>
+                <span th:if="${ratings.isEmpty()}">
+                    <span>You did not rate this beer yet.</span>
+                </span>
+                <span th:unless="${ratings.isEmpty()}">
+                    <span th:text="${rating}"></span>
+                </span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+
+    <h2 th:text="#{currentUserTable.header.beer}">Beer Details</h2>
+
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img th:attr="src=${getBeer.getPhoto()},title=${getBeer.getPhoto()},alt=${getBeer.getPhoto()}"
+                     class="card-img" alt="Beer">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title" th:text="${#strings.toUpperCase(getBeer.getName())}">Beer name</h3>
+                <label>ID:</label>
+                <span class="card-text btn btn-primary btn-sm rounded-pill" th:text="${getBeer.getId()}">Id</span>
+                <br>
+                <label>DESCRIPTION:</label>
+                <p class="card-text btn btn-success btn-sm rounded-pill" th:text="${getBeer.getDescription()}">
+                    Description</p>
+            </div>
+            <div class="list-group-item">
+                <label>BREWERY:</label>
+                <span class="btn btn-info btn-sm rounded-pill"
+                      th:text="${getBeer.getBrewery().getName()}">Brewery</span>
+            </div>
+            <div class="list-group-item">
+                <label>STYLE:</label>
+                <span class="btn btn-info btn-sm rounded-pill" th:text="${getBeer.getStyle().getName()}">Style</span>
+            </div>
+            <div class="list-group-item">
+                <label>ORIGIN COUNTRY:</label>
+                <span class="btn btn-info btn-sm rounded-pill" th:text="${getBeer.getOriginCountry().getName()}">Origin Country</span>
+            </div>
+            <div class="list-group-item">
+                <label>ALCOHOL BY VOLUME(ABV):</label>
+                <span class="btn btn-danger btn-sm rounded-pill"
+                      th:text="${#strings.append(getBeer.getAbv(), '%')}">ABV</span>
+            </div>
+            <div class="list-group-item">
+                <label>AVERAGE RATING:</label>
+                <span class="btn btn-danger btn-sm rounded-pill" th:text="${avgRating}">AVG</span>
+            </div>
+            <div class="list-group-item">
+                <label>BEER TAGS: </label>
+                <div th:if="${tags.isEmpty()}">
+                    <h5 th:text="#{beerTable.header.noTags}">There are no tags</h5>
+                </div>
+                <div th:unless="${tags.isEmpty()}">
+                    <span th:each="tag : ${tags}">
+                        <span class="btn btn-warning btn-sm rounded-pill"
+                              th:text="${tag.getTag().getName()} ">Name</span>
+                    </span>
+                    </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        'use strict';
+        $(document).ready(function () {
+            $("#giveStatus").on({
+                click: function () {
+                    if ($("#status1").val() === "I want it!") {
+                        $("#addInfo").append("<b>YOU HAVE TO TASTE IT!!!</b>.");
+
+                    } else {
+                        $("#addInfo").append("<b>CHEERS, BUDDY!!!</b>.");
+                    }
+                }
+            });
+        });
+    </script>
+</div>
+</body>
+</html>

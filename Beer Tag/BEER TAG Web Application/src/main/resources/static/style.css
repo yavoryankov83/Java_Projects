@@ -1,0 +1,60 @@
+.table {
+    display: table;
+}
+
+.header {
+    display: table-header-group;
+    font-weight: bold;
+}
+
+.rowGroup {
+    display: table-row-group;
+}
+
+.row {
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+    width: 25%;
+}
+
+body {
+    background-color: bisque;
+    background-image: url(https://middle.hipng.com/20190509/pb/beer-icon-png-beer-keg-clipart-64c1f8155b675be7.jpg);
+    background-size: 1300px;
+
+    background-position: center;
+}
+
+.form {
+    display: inline;
+}
+
+#1 {
+    float: left;
+    width: 25%;
+}
+
+#2 {
+    width: 75%;
+}
+
+#3 {
+    position: center;
+}
+
+.error {
+    color: red;
+}
+
+#navbar {
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+
+

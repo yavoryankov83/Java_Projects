@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <th:block th:include="~{fragments/head}"></th:block>
+    <title>EntityUserExistException</title>
+</head>
+
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="text-center"><i class="fa fa-frown-o"></i> Sorry, the username you have chosen already exists in our
+            system. Please try with another.</h1>
+        <p class="text-center"><a class="btn btn-primary" href="/"><i class="fa fa-home"></i> Go Home</a></p>
+    </div>
+</div>
+<th:block th:include="~{fragments/error-image}"></th:block>
+</body>
+</html>

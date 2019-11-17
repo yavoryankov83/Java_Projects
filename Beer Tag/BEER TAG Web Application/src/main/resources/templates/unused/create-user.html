@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:include="~{fragments/head}"></th:block>
+</head>
+<body>
+<form class="form" th:action="@{/}" method="get">
+    <input type="submit" class="btn btn-primary btn-lg" value="HOME">
+</form>
+
+<form th:action="@{/users/create}" th:object="${userToCreate}" method="post">
+
+    <br>
+    <label style="color: red" th:errors="*{username}" th:text="#{user.invalidUsername}">Username error</label>
+    <label th:text="#{user.header.username}">Username</label>
+    <input type="text" th:field="*{username}" placeholder="Username" required/>
+    <br>
+
+    <br>
+    <label style="color: red" th:errors="*{email}" th:text="#{user.invalidEmail}">Email error</label>
+    <label th:text="#{user.header.email}">Email</label>
+    <input type="email" th:field="*{email}" placeholder="Email" required/>
+    <br>
+
+    <br>
+    <label style="color: red" th:errors="*{password}" th:text="#{user.invalidPassword}">Password error</label>
+    <label th:text="#{user.header.password}">Password</label>
+    <input type="password" th:field="*{password}" placeholder="Password" required/>
+    <br>
+
+    <br>
+    <label th:text="#{user.header.photo}">Photo</label>
+    <input type="file" th:field="*{photo}"/>
+    <br/>
+
+    <br/>
+    <input type="submit" class="btn btn-primary btn-lg" value="Create USER">
+</form>
+
+<div class="card"
+     style="width: 15rem; background-image: url(&quot;https://study.telerikacademy.com/pluginfile.php/457/course/overviewfiles/Java-Thumbnail.jpg&quot;); background-size: auto;">
+    <div class="card-body">
+        <h5 class="card-title">Beer name</h5>
+        <p class="card-text">Description</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">ABV</li>
+        <li class="list-group-item">Brewery</li>
+        <li class="list-group-item">Style</li>
+    </ul>
+    <div class="card-body">
+        <a href="https://en.wikipedia.org/wiki/Astika_(beer)" class="card-link">Beer story</a>
+    </div>
+</div>
+
+</body>
+</html>
