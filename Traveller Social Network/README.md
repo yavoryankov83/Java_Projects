@@ -77,6 +77,8 @@ ADDITIONAL:
 Link to App: https://gitlab.com/yavoryankov83/social_network_web_application
 * [Trello] - a visual tool for organizing your work. 
 Link to App Trello: https://trello.com/b/ApWxpQIi/social-network
+* [Heroku] - deployment of the application code to a virtual machine on Heroku. 
+Link to APPLICATION: https://traveller-social-network.herokuapp.com
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
