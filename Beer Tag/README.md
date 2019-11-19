@@ -11,8 +11,8 @@ The main features of a beer are:
 - how much alcohol it contains **ABV** (alcohol by volume);
 - from which **brewery** it is made;
 - in which **country**;
-- what is the beer’s **style**;
-- as well as optional beer’s **descriptions** and its **photo**. 
+- what is the beerâ€™s **style**;
+- as well as optional beerâ€™s **descriptions** and its **photo**. 
 - Anyone can also see the **average rating** of each beer that registered users have given for it.
 
 ##### If the user wants more rights, he needs to register in the application with the button "Register" or if he has already registered, must log in to his account through the button "Login".
@@ -66,8 +66,6 @@ ADDITIONAL:
 Link to App: https://gitlab.com/yavoryankov83/beer-tag-web-application
 * [Trello] - a visual tool for organizing your work. 
 Link to App Trello: https://trello.com/b/HSioFcc6/beer-tag-web-application
-* **AWS** - deployement of the application code to a virtual machine on AWS.
-**LINK TO APPLICATION:** http://beer-tag.ddns.net/
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
