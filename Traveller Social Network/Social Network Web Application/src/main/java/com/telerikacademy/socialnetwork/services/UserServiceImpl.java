@@ -363,4 +363,3 @@ public class UserServiceImpl implements com.telerikacademy.socialnetwork.service
     }
   }
 }
-

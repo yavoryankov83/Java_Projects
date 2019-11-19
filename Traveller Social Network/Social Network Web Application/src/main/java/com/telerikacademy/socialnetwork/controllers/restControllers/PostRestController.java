@@ -165,4 +165,3 @@ public class PostRestController {
     postService.deletePost(postId);
   }
 }
-
