@@ -1,3 +1,5 @@
+`use strict`;
+
 $(document).ready(function () {
     $("#giveStatus").on({
         click: function () {
